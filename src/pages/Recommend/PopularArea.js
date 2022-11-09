@@ -26,7 +26,7 @@ const PopularArea = ({recommends}) => {
             <h2>Top 10</h2>
             <Slider className="popular-items" {...setting}>
                 {topRecommends.map(item => (
-                    <div key={item.name} className="popular-item">
+                    <div key={item.korName} className="popular-item">
                         <div className="popularItemHead">
                             <div className="popularItemHead-num-name">
                                 <div className="num">{item.rank}</div>

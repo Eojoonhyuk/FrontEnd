@@ -28,7 +28,7 @@ const Recommend = () => {
     };
 
     const searchAlcohols = () => {
-        const filterdAlcoholList = recommends.filter(item => item.name.includes(input));
+        const filterdAlcoholList = recommends.filter(item => item.korName.includes(input));
         setRecommends(filterdAlcoholList);
     }
 
@@ -113,7 +113,7 @@ const Recommend = () => {
                 <div className="recommend-box">
                     <ul className="recommend-items">
                         {displayItems && displayItems.map(item => (
-                            <li key={item.name} className="recommend-item">
+                            <li key={item.korName} className="recommend-item">
                                 <img className="recommend-img" 
                                     alt="주종이미지" 
                                     src={item.img} 
