@@ -102,7 +102,7 @@ const KakaoMap = ({keyword, setShopData, shopHasPage, currentPage, setCurrentPag
                 
                 const mylocation = new kakao.maps.LatLng(myLocation.latitude, myLocation.longitude);
                 kakaoMap.setCenter(mylocation)     
-                kakaoMap.setBounds(bounds)
+                // kakaoMap.setBounds(bounds)
 
                 removeMarker();
 

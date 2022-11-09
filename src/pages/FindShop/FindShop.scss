@@ -2,10 +2,10 @@
 
 .findshop-area{
     border: 1px solid #000;
-    padding: 6rem 6rem 3rem;
+    padding: 7rem 6rem 3rem;
     display: flex;
     justify-content: flex;
-
+    // padding: $header-height*0.2 0;
 
     .findshop-map-area {
         padding: 1rem 0 1rem 6rem;
@@ -26,6 +26,7 @@
 
         .findshop-filter-row {
             padding: 1rem 1rem 0 1rem;
+
 
             .findshop-filter-title {
                 padding-bottom: 0.6rem;
@@ -132,12 +133,13 @@
         .findshop-shop-filter {
             display: flex;
             justify-content: flex-end;
+            align-items: center;
+            text-align: center;
             padding-bottom: 0.8rem;
             font-size: 14px;
             width: 90%;
+            
             span {
-                margin-right: 0.4rem;
-
                 &:last-child {
                     margin-right: 0;
                 }

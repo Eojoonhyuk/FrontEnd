@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useCallback, useRef} from 'react'
+import React, {useState, useEffect, useCallback} from 'react'
 import "./Recommend.scss";
 import Modal from "./Modal";
 import NavBar from "./NavBar";
@@ -19,7 +19,7 @@ const Recommend = () => {
     const [keyRef, setKeyRef] = useState(null);
     const [userId, setUserId] = useState(null);
     const [input, setInput] = useState("");
-
+    
     const onKeyUp = (e) => {
         if(e.key === 'Enter') {
             if (e.target.value.trim().length > 0) searchAlcohols();
@@ -84,7 +84,7 @@ const Recommend = () => {
                 <NavBar setAlcohol={setAlcohol}/>
             </div>
             <div className="recommend-content">
-                {selectedAlcohol && 
+                {selectedAlcohol &&
                     (<Modal
                         userId={userId}
                         alcohol={alcohol}
@@ -115,7 +115,7 @@ const Recommend = () => {
                                 <img className="recommend-img" 
                                     alt="주종이미지" 
                                     src={item.img} 
-                                    onClick ={()=> setSelectedAlcohol(item)}/>
+                                    onClick ={()=> {setSelectedAlcohol(item)}}/>
                                 <div className="recommend-itemExplain">
                                     <div className="explain-box">
                                         <p className="recommend-item-name">{item.name}</p>
@@ -138,7 +138,6 @@ const Recommend = () => {
                     />
             </div>
             <div className='recommend-right'></div>
-
         </div>
     );
 }
